@@ -6,7 +6,7 @@ type FormProps = {
   children?: React.ReactNode;
 };
 
-const Form = ({ addTask }: FormProps): JSX.Element => {
+const Form = ({ addTask, children }: FormProps): JSX.Element => {
   const [task, setTask] = useState<string>("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
@@ -28,6 +28,7 @@ const Form = ({ addTask }: FormProps): JSX.Element => {
   return (
     <>
       <h2>Form Input</h2>
+      {children}
       <form action="" onSubmit={handleSubmit}>
         <label htmlFor="">task description </label>
         <input value={task} onChange={handleChange} type="text" />
