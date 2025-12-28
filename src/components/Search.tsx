@@ -2,7 +2,7 @@ import React, { useState, type JSX } from "react";
 import type { Task } from "../types/types";
 
 type SearchProps = {
-  searchTask: (desc: string) => Task;
+  searchTask: (desc: string) => Task | undefined;
 };
 
 const Search = ({ searchTask }: SearchProps): JSX.Element => {
@@ -15,7 +15,7 @@ const Search = ({ searchTask }: SearchProps): JSX.Element => {
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const item: Task = searchTask(searchName);
+    const item: Task | undefined = searchTask(searchName);
     const value: string = item?.description || "not found";
     setTask(value);
   }
