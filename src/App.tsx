@@ -16,7 +16,7 @@ function App(): JSX.Element {
   return (
     <>
       <Form addTask={addTask}>
-        <div>asd</div>
+        <div></div>
       </Form>
       <List tasks={tasks} />
     </>
