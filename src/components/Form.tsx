@@ -3,6 +3,7 @@ import type { Task } from "../types/types";
 
 type FormProps = {
   addTask: (task: Task) => void;
+  children?: React.ReactNode;
 };
 
 const Form = ({ addTask }: FormProps): JSX.Element => {

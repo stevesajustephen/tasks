@@ -3,6 +3,7 @@ import type { Task } from "../types/types";
 
 type ListProps = {
   tasks: Task[];
+  children?: React.ReactNode;
 };
 
 const List = ({ tasks }: ListProps): JSX.Element => {
